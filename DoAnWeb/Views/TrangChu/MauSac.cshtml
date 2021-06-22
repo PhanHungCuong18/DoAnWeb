@@ -1,0 +1,9 @@
+﻿@model IEnumerable<DoAnWeb.Models.MauSac>
+
+
+
+@foreach (var item in Model)
+{
+  
+  <a href="@Url.Action("HoatheoMS", "TrangChu", new { id = item.MaMau})">@item.TenMau </a>
+}

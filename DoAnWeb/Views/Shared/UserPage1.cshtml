@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>
+        FLOWER SHOP
+    </title>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="container">
+        <div id="banner">
+            <div class="header">
+                <div id="logo">
+
+                    <img class="logo" src="~/Images/unnamed.jpg" />
+                </div>
+                <form>
+                    <input type="text" name="search" placeholder="Search..">
+                </form>
+            </div>
+
+            <div id="menutop">
+                <a href="#">Trang chủ</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Chủ đề</a>
+                <a href="#">Màu sắc</a>
+                <a href="#">Khuyến mãi</a>
+                <a href="#">Liên hệ</a>
+            </div>
+        </div><!--hetbanner-->
+        <div id="content">
+            <div id="left">
+                <div class="module">
+                    <h3>Chủ đề sản phẩm </h3>
+                    @Html.Action("ChuDe", "TrangChu")
+                </div>
+
+                <div class="module">
+                    <h3>Loại sản phẩm </h3>
+                    @Html.Action("Loai", "TrangChu")
+                </div>
+                <div class="module">
+                    <h3>Màu sắc</h3>
+                    @Html.Action("MauSac", "TrangChu")
+                </div>
+
+            </div><!--hetleft-->
+            <div id="right">
+                <div id="slideshow">
+                    <img class="imga1" src="https://bonn.vn/wp-content/uploads/2017/07/6ru.jpg" />
+                </div>
+                <div>
+                    @RenderBody();
+                </div>
+            </div><!--hetright-->
+            <div class="clear">
+            </div>
+        </div><!--hetcontent-->
+
+        
+   
+    <div id="footer">
+        <p>Bản quyền thuộc về: <b>ABCXYZ</b></p>
+        <p>Mẫu website được thiết kế bởi: <b><a href="http://www.google.com">webdesiner</a></b></p>
+    </div><!--footer-->
+    </div><!--hetconterner-->
+</body>
+</html>

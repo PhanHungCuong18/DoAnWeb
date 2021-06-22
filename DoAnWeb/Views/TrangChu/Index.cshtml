@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DoAnWeb.Models.SanPhan>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/UserPage1.cshtml";
+}
+    
+<div id="products">
+    <h3 class="header">Sản phẩm mới </h3>@foreach (var sanPhan in Model)
+    {
+        <div class="item">
+            <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=sanPhan.MaSP })">
+            <h3 class="productName">@sanPhan.TenSP</h3>
+            <img class="productImg" src="~/Images/SPkhuyenmai/@sanPhan.AnhSP" width="150" />
+            </a>
+            <p class="productPrice">@sanPhan.Gia VND</p>
+            <a class="productDetail" href="#">Chi tiết</a>
+            <a class="productBuy" href="#">Mua hàng</a>
+        </div>
+    }
+</div>
+<div id="products">
+    <h3 class="header">Bó hoa</h3>
+    @foreach (var sanPhan in Model.Where(a => a.MaLoai == 1))
+    {
+        <div class="item">
+            <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=sanPhan.MaSP })">
+                <h3 class="productName">@sanPhan.TenSP</h3>
+                <img class="productImg" src="~/Images/SPkhuyenmai/@sanPhan.AnhSP" width="150" />
+            </a>
+            <p class="productPrice">@sanPhan.Gia VND</p>
+            <a class="productDetail" href="#">Chi tiết</a>
+            <a class="productBuy" href="#">Mua hàng</a>
+        </div>
+    }
+</div>
+<div id="products">
+    <h3 class="header">Giỏ Hoa</h3>@foreach (var sanPhan in Model.Where(a=>a.MaLoai==3))
+    {
+        <div class="item">
+            <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=sanPhan.MaSP })">
+                <h3 class="productName">@sanPhan.TenSP</h3>
+                <img class="productImg" src="~/Images/SPkhuyenmai/@sanPhan.AnhSP" width="150" />
+            </a>
+            <p class="productPrice">@sanPhan.Gia VND</p>
+            <a class="productDetail" href="#">Chi tiết</a>
+            <a class="productBuy" href="#">Mua hàng</a>
+        </div>
+    }
+</div>
+    
+

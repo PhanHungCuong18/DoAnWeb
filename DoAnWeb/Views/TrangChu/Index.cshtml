@@ -1,6 +1,22 @@
-﻿@{
+﻿@model IEnumerable<DoAnWeb.Models.SanPhan>
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/UserPage1.cshtml";
 }
 
+<div id="products">
+    <h3 class="header">Sản phẩm mới</h3>
+    @foreach (var hoa in Model)
+    {
+    <div class="item">
+        <h3 class="productName">@hoa.TenSP</h3>
 
+        <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
+        <p class="productPrice">@hoa.Gia VND</p>
+        <a class="productDetail" href="#">Chi tiết</a>
+        <a class="productBuy" href="#">Mua hàng</a>
+    </div>
+    }
+
+
+</div>

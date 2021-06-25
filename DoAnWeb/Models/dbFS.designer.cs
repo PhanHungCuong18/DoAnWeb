@@ -164,7 +164,7 @@ namespace DoAnWeb.Models
 		
 		private System.Nullable<int> _MaCD;
 		
-		private string _MaMau;
+		private System.Nullable<int> _MaMau;
 		
 		private EntitySet<CTDatHang> _CTDatHangs;
 		
@@ -196,7 +196,7 @@ namespace DoAnWeb.Models
     partial void OnSoluongChanged();
     partial void OnMaCDChanging(System.Nullable<int> value);
     partial void OnMaCDChanged();
-    partial void OnMaMauChanging(string value);
+    partial void OnMaMauChanging(System.Nullable<int> value);
     partial void OnMaMauChanged();
     #endregion
 		
@@ -397,8 +397,8 @@ namespace DoAnWeb.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaMau", DbType="NChar(10)")]
-		public string MaMau
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaMau", DbType="Int")]
+		public System.Nullable<int> MaMau
 		{
 			get
 			{
@@ -461,7 +461,7 @@ namespace DoAnWeb.Models
 					}
 					else
 					{
-						this._MaMau = default(string);
+						this._MaMau = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("MauSac");
 				}
@@ -575,7 +575,7 @@ namespace DoAnWeb.Models
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _MaMau;
+		private int _MaMau;
 		
 		private string _TenMau;
 		
@@ -585,7 +585,7 @@ namespace DoAnWeb.Models
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnMaMauChanging(string value);
+    partial void OnMaMauChanging(int value);
     partial void OnMaMauChanged();
     partial void OnTenMauChanging(string value);
     partial void OnTenMauChanged();
@@ -597,8 +597,8 @@ namespace DoAnWeb.Models
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaMau", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaMau
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaMau", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MaMau
 		{
 			get
 			{

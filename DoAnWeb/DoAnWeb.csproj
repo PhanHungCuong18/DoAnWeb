@@ -202,6 +202,9 @@
     <Content Include="Views\TrangChu\ChuDe.cshtml" />
     <Content Include="Views\TrangChu\MauSac.cshtml" />
     <Content Include="Views\TrangChu\Loai.cshtml" />
+    <Content Include="Views\TrangChu\HoatheoLoai.cshtml" />
+    <Content Include="Views\TrangChu\HoatheoCD.cshtml" />
+    <Content Include="Views\TrangChu\HoatheoMS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

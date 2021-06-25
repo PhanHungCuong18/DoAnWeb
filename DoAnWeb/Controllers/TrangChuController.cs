@@ -41,5 +41,20 @@ namespace DoAnWeb.Controllers
             var loai = from LoaiSP in data.LoaiSPs select LoaiSP;
             return PartialView(loai);
         }
+        public ActionResult HoatheoLoai(int id)
+        {
+            var hoa = from h in data.SanPhans where h.MaLoai==id  select h;
+            return PartialView(hoa);
+        }
+        public ActionResult HoatheoCD(int id)
+        {
+            var hoa = from h in data.SanPhans where h.MaCD == id select h;
+            return PartialView(hoa);
+        }
+        public ActionResult HoatheoMS(int id)
+        {
+            var hoa = from h in data.SanPhans where h.MaMau ==id  select h;
+            return PartialView(hoa);
+        }
     }
 }

@@ -11,7 +11,7 @@
       <Column Name="NgayUpdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaCD" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaMau" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MaMau" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="SanPhan_CTDatHang" Member="CTDatHangs" ThisKey="MaSP" OtherKey="MaSp" Type="CTDatHang" />
       <Association Name="MauSac_SanPhan" Member="MauSac" ThisKey="MaMau" OtherKey="MaMau" Type="MauSac" IsForeignKey="true" />
       <Association Name="LoaiSP_SanPhan" Member="LoaiSP" ThisKey="MaLoai" OtherKey="MaLoai" Type="LoaiSP" IsForeignKey="true" />
@@ -20,7 +20,7 @@
   </Table>
   <Table Name="dbo.MauSac" Member="MauSacs">
     <Type Name="MauSac">
-      <Column Name="MaMau" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMau" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenMau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="MauSac_SanPhan" Member="SanPhans" ThisKey="MaMau" OtherKey="MaMau" Type="SanPhan" />
     </Type>

@@ -8,15 +8,46 @@
     <h3 class="header">Sản phẩm mới</h3>
     @foreach (var hoa in Model)
     {
-    <div class="item">
+        <div class="item">
+        <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">
         <h3 class="productName">@hoa.TenSP</h3>
-
         <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
+        </a>
         <p class="productPrice">@hoa.Gia VND</p>
-        <a class="productDetail" href="#">Chi tiết</a>
+        <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">Chi tiết</a>
         <a class="productBuy" href="#">Mua hàng</a>
-    </div>
+        </div>
     }
+</div>
 
+<div id="products">
+    <h3 class="header">Bó hoa </h3>
+    @foreach (var hoa in Model.Where(a=>a.MaLoai==1))
+    {
+<div class="item">
+    <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">
+        <h3 class="productName">@hoa.TenSP</h3>
+        <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
+        </a>
+        <p class="productPrice">@hoa.Gia VND</p>
+        <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })" >Chi tiết</a>
+        <a class="productBuy" href="#">Mua hàng</a>
+</div>
+    }
+</div>
 
+<div id="products">
+    <h3 class="header">Bình Hoa </h3>
+    @foreach (var hoa in Model.Where(a => a.MaLoai == 2))
+    {
+        <div class="item">
+            <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">
+                <h3 class="productName">@hoa.TenSP</h3>
+                <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
+            </a>
+            <p class="productPrice">@hoa.Gia VND</p>
+            <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">Chi tiết</a>
+            <a class="productBuy" href="#">Mua hàng</a>
+        </div>
+    }
 </div>

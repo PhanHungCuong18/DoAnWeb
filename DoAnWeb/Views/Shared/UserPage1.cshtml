@@ -5,8 +5,9 @@
     <title>
         FLOWER SHOP
     </title>
-    <link href="~/Content/Style.css" rel="stylesheet" />
 
+    @*<link href="~/Content/Style.css" rel="stylesheet" />*@
+    <link href="~/Content/Styles.css"  rel="stylesheet" />
 </head>
 <body>
     <div id="container">
@@ -31,6 +32,7 @@
                 <a href="#">Liên hệ</a>
             </div>
         </div><!--hetbanner-->
+    
         <div id="content">
             <div id="left">
                 <div class="module">
@@ -42,6 +44,7 @@
                 <h3>Loại</h3>
                 @Html.Action("Loai", "TrangChu")
                   </div>
+  
                  <div class="module">
                 <h3>Màu sắc</h3>
                 @Html.Action("MauSac", "TrangChu")
@@ -54,7 +57,8 @@
 
                 </div>
                 <div>
-                    @RenderBody();
+                    
+                    @RenderBody()
                 </div>
     </div><!--hetright-->
     <div class="clear">
@@ -68,3 +72,4 @@
     </div><!--hetconterner-->
 </body>
 </html>
+

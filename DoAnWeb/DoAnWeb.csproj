@@ -122,6 +122,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,7 +139,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Style.css" />
+    <Content Include="Content\Styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -205,10 +206,12 @@
     <Content Include="Views\TrangChu\HoatheoLoai.cshtml" />
     <Content Include="Views\TrangChu\HoatheoCD.cshtml" />
     <Content Include="Views\TrangChu\HoatheoMS.cshtml" />
+    <Content Include="Views\NguoiDung\TaiKhoan.cshtml" />
+    <Content Include="Views\NguoiDung\DangKy.cshtml" />
+    <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

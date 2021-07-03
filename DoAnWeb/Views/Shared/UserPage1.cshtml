@@ -6,8 +6,7 @@
         FLOWER SHOP
     </title>
 
-    @*<link href="~/Content/Style.css" rel="stylesheet" />*@
-    <link href="~/Content/Styles.css"  rel="stylesheet" />
+      <link href="~/Content/Styles.css"  rel="stylesheet" />
 </head>
 <body>
     <div id="container">
@@ -29,7 +28,9 @@
                 <a href="#">Chủ đề</a>
                 <a href="#">Màu sắc</a>
                 <a href="#">Khuyến mãi</a>
-                <a href="#">Liên hệ</a>
+
+                <a href="@Url.Action("Dangnhap", "NguoiDung")">Đăng nhập</a>
+                
             </div>
         </div><!--hetbanner-->
     
@@ -52,10 +53,7 @@
 
             </div><!--hetleft-->
             <div id="right">
-                <div id="slideshow">
-                    <img class="imga1" src="https://bonn.vn/wp-content/uploads/2017/07/6ru.jpg" />
-
-                </div>
+                
                 <div>
                     
                     @RenderBody()

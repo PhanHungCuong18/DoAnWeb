@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/UserPage1.cshtml";
 }
 <table align="center">
-    <h2 style="text-align:center">Đăng ký thành viên </h2>
+    <h2  style="text-align:center">Đăng ký thành viên </h2>
     @using (Html.BeginForm())
     {
         @Html.ValidationSummary(true)
@@ -55,10 +55,12 @@
         <tr style="height:40px">
             <td></td>
             <td>
-              
-                        <a href="@Url.Action("Dangnhap","NguoiDung")"/>
+                <a href="@Url.Action("Dangnhap","NguoiDung")"/>
                 <input type="submit" value="Đăng ký " />
-                    </td>
+            </td>
         </tr>
     }
 </table>
+<div>
+    <h3 style="text-align:center">Nếu đã có tài khoản , vui lòng <a href="@Url.Action("Dangnhap","NguoiDung")">đăng nhập!!! </a></h3>
+</div>

@@ -206,7 +206,6 @@
     <Content Include="Views\TrangChu\HoatheoLoai.cshtml" />
     <Content Include="Views\TrangChu\HoatheoCD.cshtml" />
     <Content Include="Views\TrangChu\HoatheoMS.cshtml" />
-    <Content Include="Views\NguoiDung\TaiKhoan.cshtml" />
     <Content Include="Views\NguoiDung\DangKy.cshtml" />
     <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
   </ItemGroup>

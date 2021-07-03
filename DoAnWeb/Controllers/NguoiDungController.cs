@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,7 +22,7 @@ namespace DoAnWeb.Controllers
             return View();
         }
         [HttpPost]
-        
+     
         public ActionResult DangKy(FormCollection collection,KhanhHang kh)
         {
             var hoten = collection["HotenKH"];
@@ -44,9 +45,9 @@ namespace DoAnWeb.Controllers
             {
                 ViewData["Loi3"] = "Phải nhập mật khẩu  ";
             }
-            else if (String.IsNullOrEmpty(matkhaunhaplai))
+            else if (matkhaunhaplai!=matkhau)
             {
-                ViewData["Loi4"] = "Phải nhập mật khẩu nhập lại  ";
+                ViewData["Loi4"] = "Mật khẩu không trùng khớp ";
             }
             else if (String.IsNullOrEmpty(email))
             {

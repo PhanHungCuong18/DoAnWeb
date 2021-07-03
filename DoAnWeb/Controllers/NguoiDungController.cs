@@ -98,7 +98,8 @@ namespace DoAnWeb.Controllers
                 if (KH != null)
                 {
                     ViewBag.Thongbao = "Chúc mừng đăng nhập thành công ";
-                    Session["Taikhoan"] = kh;
+                    Session["Taikhoan"] = kh.HoTen;
+                    return RedirectToAction("Index","TrangChu");
                 }
                 else
                     ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng ";

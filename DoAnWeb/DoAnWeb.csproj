@@ -208,6 +208,7 @@
     <Content Include="Views\TrangChu\HoatheoMS.cshtml" />
     <Content Include="Views\NguoiDung\DangKy.cshtml" />
     <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
+    <Content Include="Views\TrangChu\ChiTietHoa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

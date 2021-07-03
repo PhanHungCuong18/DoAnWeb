@@ -54,5 +54,12 @@ namespace DoAnWeb.Controllers
             var hoa = from h in data.SanPhans where h.MaMau == id select h;
             return View(hoa);
         }
+        public ActionResult ChiTietHoa(int id)
+        {
+            var hoa = from h in data.SanPhans
+                      where h.MaSP == id
+                      select h;
+            return View(hoa.Single());
+        }
     }
 }

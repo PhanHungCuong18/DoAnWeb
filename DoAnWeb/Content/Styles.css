@@ -51,12 +51,14 @@
         padding-bottom: 10px;
         color: #000;
     }
-
+#giohang a:hover {
+    color: red;
+    border-bottom: 3px solid #464646;
+}
         #menutop a:hover {
             color: red;
             border-bottom: 3px solid #464646;
         }
-
 #content #left .module h3 {
     background: #f3f3f3;
 }

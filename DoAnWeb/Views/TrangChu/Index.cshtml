@@ -18,7 +18,7 @@
         </a>
         <p class="productPrice">@hoa.Gia VND</p>
         <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">Chi tiết</a>
-        <a class="productBuy" href="#">Mua hàng</a>
+        <a class="productBuy" href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= hoa.MaSP, @strURL=Request.Url.ToString() })">Mua hàng</a>
         </div>
     }
 </div>
@@ -36,7 +36,7 @@
         </a>
         <p class="productPrice">@hoa.Gia VND</p>
         <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })" >Chi tiết</a>
-        <a class="productBuy" href="#">Mua hàng</a>
+        <a class="productBuy" href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= hoa.MaSP, @strURL=Request.Url.ToString() })">Mua hàng</a>
 </div>
     }
 </div>
@@ -52,7 +52,7 @@
             </a>
             <p class="productPrice">@hoa.Gia VND</p>
             <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">Chi tiết</a>
-            <a class="productBuy" href="#">Mua hàng</a>
+            <a class="productBuy" href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= hoa.MaSP, @strURL=Request.Url.ToString() })">Mua hàng</a>
         </div>
     }
 </div>

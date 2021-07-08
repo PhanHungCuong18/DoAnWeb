@@ -121,6 +121,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
@@ -132,6 +133,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbFS.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Giohang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +151,7 @@
     <Content Include="Images\BoHoa\2065_anh-duong.jpg" />
     <Content Include="Images\BoHoa\3199_yeu-xa.jpg" />
     <Content Include="Images\BoHoa\4840_only-you.jpg" />
+    <Content Include="Images\giohang.gif" />
     <Content Include="Images\GioHoa\10262_mua-xuan-cua-me.png" />
     <Content Include="Images\GioHoa\10267_nang-hong.png" />
     <Content Include="Images\GioHoa\8290_pink-box.jpg" />
@@ -209,6 +212,10 @@
     <Content Include="Views\NguoiDung\DangKy.cshtml" />
     <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
     <Content Include="Views\TrangChu\ChiTietHoa.cshtml" />
+    <Content Include="Views\GioHang\DatHang.cshtml" />
+    <Content Include="Views\GioHang\GiohangPartial.cshtml" />
+    <Content Include="Views\GioHang\GioHang.cshtml" />
+    <Content Include="Views\GioHang\Xacnhandonhang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

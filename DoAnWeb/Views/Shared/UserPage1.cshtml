@@ -5,8 +5,8 @@
     <title>
         FLOWER SHOP
     </title>
-
-      <link href="~/Content/Styles.css"  rel="stylesheet" />
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+      
 </head>
 <body>
     <div id="container">
@@ -19,7 +19,12 @@
                 <form>
                     <input type="text" name="search" placeholder="Search..">
                 </form>
-                
+                <div id="giohang">   
+                    <a>
+                        @Html.Action("GiohangPartial", "Giohang")
+                    </a>
+                </div>
+
             </div>
 
             <div id="menutop">

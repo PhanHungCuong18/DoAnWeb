@@ -97,8 +97,8 @@ namespace DoAnWeb.Controllers
                 KhanhHang KH = db.KhanhHangs.SingleOrDefault(n => n.TaiKhoan == tendn && n.Password == matkhau);
                 if (KH != null)
                 {
-                    ViewBag.Thongbao = "Chúc mừng đăng nhập thành công ";
-                    Session["Taikhoan"] = kh.HoTen;
+                   
+                    Session["Taikhoan"] = KH;
                     return RedirectToAction("Index","TrangChu");
                 }
                 else

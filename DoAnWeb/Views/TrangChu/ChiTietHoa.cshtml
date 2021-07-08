@@ -27,7 +27,7 @@
     </div>
     <div>
         <div id="Datmua">
-            <a href="@Url.Action("AddToCard","ShoppingCard",new { id =Model.MaSP})"class="list-group-item">
+            <a href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= @Model.MaSP, @strURL=Request.Url.ToString() })"class="list-group-item">
                 ĐẶT MUA 
             </a>
         </div>

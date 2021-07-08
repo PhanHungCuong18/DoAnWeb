@@ -14,7 +14,7 @@
             </a>
             <p class="productPrice">@sanPhan.Gia VND</p>
             <a class="productDetail" href="#">Chi tiết</a>
-            <a class="productBuy" href="#">Mua hàng</a>
+            <a class="productBuy" href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= sanPhan.MaSP, @strURL=Request.Url.ToString() })">Mua hàng</a>
         </div>
     }
 </div>

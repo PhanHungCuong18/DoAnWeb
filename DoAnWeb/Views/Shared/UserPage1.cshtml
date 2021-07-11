@@ -14,7 +14,7 @@
             <div class="header">
                 <div id="logo">
 
-                    <img class="logo" src="~/Images/unnamed.jpg" />
+                    <a href="@Url.Action("Index", "TrangChu")"><img class="logo" src="~/Images/unnamed.jpg" /></a>
                 </div>
                 <form>
                     <input type="text" name="search" placeholder="Search..">
@@ -28,7 +28,7 @@
             </div>
 
             <div id="menutop">
-                <a href="#">Trang chủ</a>
+                <a href="@Url.Action("Index", "TrangChu")">Trang chủ</a>
                 <a href="#">Giới thiệu</a>
                 <a href="#">Sản phẩm</a>
                 <a href="#">Chủ đề</a>

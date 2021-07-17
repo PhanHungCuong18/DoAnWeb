@@ -1,0 +1,107 @@
+﻿@model PagedList.PagedList<DoAnWeb.Models.SanPhan>
+@using PagedList.Mvc
+@using DoAnWeb.Models
+
+@helper Truncate(string input,int length)
+    {
+        if(input.Length<length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0,length)<text>...</text>
+    }
+    }
+@{
+    ViewBag.Title = "Hoa";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Quản lý thông tin sản phẩm </h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Gia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Mota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().AnhSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaLoai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().NgayUpdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Soluong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaMau)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenSP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Gia)
+    </td>
+    <td>
+       @Truncate(item.Mota,100)
+    </td>
+    <td>
+        <img src="@Url.Content("~/Images/SPkhuyenmai/"+item.AnhSP)" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LoaiSP.TenLoai)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayUpdate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Soluong)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ChuDe.TenChuDe)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MauSac.TenMau)
+    </td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaSP })
+    </td>
+</tr>
+    }
+
+</table>
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+
+    @Html.PagedListPager(Model, page => Url.Action("Hoa", new { page = page }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>

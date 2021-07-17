@@ -17,13 +17,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Trang Chủ ", "Index", "TrangChu", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("Quản lý chủ đề  ", "chude", "Admin")</li>
+                    <li>@Html.ActionLink("Quản lý màu sắc ", "mausac", "Admin")</li>
+                    <li>@Html.ActionLink("Quản lý loại  ", "loai", "Admin")</li>
+                    <li>@Html.ActionLink("Quản lý sản phẩm  ", "sanpham", "Admin")</li>*@
                 </ul>
             </div>
         </div>
@@ -32,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p style="color:white;">&copy; @DateTime.Now.Year - Flower Shop Admin Panel</p>
         </footer>
     </div>
 

@@ -1,4 +1,6 @@
-﻿@model IEnumerable<DoAnWeb.Models.SanPhan>
+﻿@using DoAnWeb.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<SanPhan>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/UserPage1.cshtml";
@@ -12,40 +14,6 @@
     @foreach (var hoa in Model)
     {
         <div class="item">
-        <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">
-        <h3 class="productName">@hoa.TenSP</h3>
-        <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
-        </a>
-        <p class="productPrice">@hoa.Gia VND</p>
-        <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">Chi tiết</a>
-        <a class="productBuy" href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= hoa.MaSP, @strURL=Request.Url.ToString() })">Mua hàng</a>
-        </div>
-    }
-</div>
-
-
-
-<div id="products">
-    <h3 class="header">Bó hoa </h3>
-    @foreach (var hoa in Model.Where(a=>a.MaLoai==1))
-    {
-<div class="item">
-    <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">
-        <h3 class="productName">@hoa.TenSP</h3>
-        <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
-        </a>
-        <p class="productPrice">@hoa.Gia VND</p>
-        <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })" >Chi tiết</a>
-        <a class="productBuy" href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= hoa.MaSP, @strURL=Request.Url.ToString() })">Mua hàng</a>
-</div>
-    }
-</div>
-
-<div id="products">
-    <h3 class="header">Bình Hoa </h3>
-    @foreach (var hoa in Model.Where(a => a.MaLoai == 2))
-    {
-        <div class="item">
             <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">
                 <h3 class="productName">@hoa.TenSP</h3>
                 <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
@@ -56,3 +24,46 @@
         </div>
     }
 </div>
+Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>
+
+
+@*<div id="products">
+        <h3 class="header">Bó hoa </h3>
+        @foreach (var hoa in Model.Where(a => a.MaLoai == 1))
+        {
+            <div class="item">
+                <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">
+                    <h3 class="productName">@hoa.TenSP</h3>
+                    <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
+                </a>
+                <p class="productPrice">@hoa.Gia VND</p>
+                <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">Chi tiết</a>
+                <a class="productBuy" href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= hoa.MaSP, @strURL=Request.Url.ToString() })">Mua hàng</a>
+            </div>
+        }
+    </div>
+
+    <div id="products">
+        <h3 class="header">Bình Hoa </h3>
+        @foreach (var hoa in Model.Where(a => a.MaLoai == 2))
+        {
+            <div class="item">
+                <a href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">
+                    <h3 class="productName">@hoa.TenSP</h3>
+                    <img class="productImg" src="~/Images/SPkhuyenmai/@hoa.AnhSP" width="150" />
+                </a>
+                <p class="productPrice">@hoa.Gia VND</p>
+                <a class="productDetail" href="@Url.Action("ChiTietHoa","TrangChu",new {id=hoa.MaSP })">Chi tiết</a>
+                <a class="productBuy" href="@Url.Action("ThemGiohang","GioHang",new {@iMasp= hoa.MaSP, @strURL=Request.Url.ToString() })">Mua hàng</a>
+            </div>
+        }
+    </div>*@

@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using DoAnWeb.Models;
 
+using PagedList;
+using PagedList.Mvc;
 
 namespace DoAnWeb.Controllers
 {
@@ -18,10 +20,12 @@ namespace DoAnWeb.Controllers
         
 
         // GET: TrangChu
-        public ActionResult Index()
+        public ActionResult Index(int ?page )
         {
-            var hoamoi = Layhoamoi(6);
-            return View(hoamoi);
+            int pageSize = 4;
+            int pageNum = (page ?? 1);
+            var hoamoi = Layhoamoi(15);
+            return View(hoamoi.ToPagedList(pageNum,pageSize));
         }
         public ActionResult Loai()
         {

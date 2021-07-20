@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DoAnWeb.Models.ChuDe> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>Quản lý thông tin Chủ đề sản phẩm  </h2>
+<p>
+    @Html.ActionLink("Thêm mới Chủ đề ", "ThemChuDe", "ChuDe")
+</p>
+<table class="table">
+    <tr>
+        <th style="width:200px">  Tên Chủ đề </th>
+        <th style="width:200px">  </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenChuDe)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.MaCD }) |
+                @Html.ActionLink("Chi tiết", "ChitietChude", new { id = item.MaCD }) |
+                @Html.ActionLink("Xóa ", "XoaCD", new { id = item.MaCD })
+            </td>
+        </tr>
+    }
+    </table>

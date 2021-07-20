@@ -16,9 +16,7 @@
 
                     <a href="@Url.Action("Index", "TrangChu")"><img class="logo" src="~/Images/unnamed.jpg" /></a>
                 </div>
-                <form>
-                    <input type="text" name="search" placeholder="Search..">
-                </form>
+                
                 <div id="giohang">   
                     <a>
                         @Html.Action("GiohangPartial", "Giohang")
@@ -29,11 +27,7 @@
 
             <div id="menutop">
                 <a href="@Url.Action("Index", "TrangChu")">Trang chủ</a>
-                <a href="#">Giới thiệu</a>
-                <a href="#">Sản phẩm</a>
-                <a href="#">Chủ đề</a>
-                <a href="#">Màu sắc</a>
-                <a href="#">Khuyến mãi</a>
+                <a href="@Url.Action("DangKy", "NguoiDung")">Đăng ký</a>
                 <a href="@Url.Action("Dangnhap", "NguoiDung")">Đăng nhập</a>
 
             </div>
@@ -69,7 +63,7 @@
     </div>
     </div><!--hetcontent-->
     <div id="footer">
-        <p>Bản quyền thuộc về: <b>ABCXYZ</b></p>
+        <p>Bản quyền thuộc về: <b>Ngọc Trinh-Hùng Cường </b></p>
         <p>Mẫu website được thiết kế bởi: <b><a href="http://www.google.com">webdesiner</a></b></p>
     </div><!--footer-->
     </div><!--hetconterner-->

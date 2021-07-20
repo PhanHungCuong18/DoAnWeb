@@ -1,0 +1,27 @@
+﻿@model DoAnWeb.Models.LoaiSP
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết loại sản phẩm </h2>
+
+<div>
+    <h4>Loại sản phẩm </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+          Tên loại: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa ", "Edit", new { id = Model.MaLoai }) |
+    @Html.ActionLink("Trở về ", "Index")
+</p>

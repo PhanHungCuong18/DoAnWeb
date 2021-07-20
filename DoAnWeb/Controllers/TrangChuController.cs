@@ -22,7 +22,7 @@ namespace DoAnWeb.Controllers
         // GET: TrangChu
         public ActionResult Index(int ?page )
         {
-            int pageSize = 4;
+            int pageSize = 6 ;
             int pageNum = (page ?? 1);
             var hoamoi = Layhoamoi(15);
             return View(hoamoi.ToPagedList(pageNum,pageSize));

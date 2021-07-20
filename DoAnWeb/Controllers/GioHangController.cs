@@ -160,11 +160,21 @@ namespace DoAnWeb.Controllers
             ddh.MaKH = kh.MaKH;
             ddh.NgayDH = DateTime.Now;
             var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
-            ddh.NgayGiao = DateTime.Parse(ngaygiao);
+            if (ngaygiao == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn ngày giao  ";
+                return View();
+            }
+            else
+            {
+                ddh.NgayGiao = DateTime.Parse(ngaygiao);
+            }
+            
             ddh.Tinhtranggiaohang = false;
             ddh.DaThanhToan = false;
             db.DonDatHangs.InsertOnSubmit(ddh);
             db.SubmitChanges();
+           
             //Them chi tiet don hang            
             foreach (var item in gh)
             {

@@ -1,0 +1,27 @@
+﻿@model DoAnWeb.Models.MauSac
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết màu sắc </h2>
+
+<div>
+    <h4>Màu sắc </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Tên màu:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMau)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa ", "Edit", new { id = Model.MaMau }) |
+    @Html.ActionLink("Trở về ", "Index")
+</p>

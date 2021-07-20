@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DoAnWeb.Models.LoaiSP>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<h2>Quản lý thông tin loại sản phẩm  </h2>
+<p>
+    @Html.ActionLink("Thêm mới Loại  ", "Create", "Loai")
+</p>
+<table class="table">
+    <tr>
+        <th style="width:200px">  Tên Loại    </th>
+        <th style="width:200px">  </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLoai)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.MaLoai }) |
+                @Html.ActionLink("ChiTiet", "Details", new { id = item.MaLoai }) |
+                @Html.ActionLink("Xóa ", "XoaLoai", new { id = item.MaLoai })
+            </td>
+        </tr>
+    }
+    </table>

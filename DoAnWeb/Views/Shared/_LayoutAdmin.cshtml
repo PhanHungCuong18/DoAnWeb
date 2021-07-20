@@ -3,9 +3,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>Admin </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+<script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+ <script >tinymce.init({ selector: 'textarea' });</script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -20,9 +22,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Quản lý chủ đề  ", "chude", "Admin")</li>
-                    <li>@Html.ActionLink("Quản lý màu sắc ", "mausac", "Admin")</li>
-                    <li>@Html.ActionLink("Quản lý loại  ", "loai", "Admin")</li>
+                    <li>@Html.ActionLink("Quản lý chủ đề  ", "Index", "ChuDe")</li>
+                    <li>@Html.ActionLink("Quản lý màu sắc ", "Index", "MauSac")</li>
+                    <li>@Html.ActionLink("Quản lý loại  ", "Index", "Loai")</li>
                     <li>@Html.ActionLink("Quản lý sản phẩm  ", "Hoa", "Admin")</li>
                 </ul>
             </div>

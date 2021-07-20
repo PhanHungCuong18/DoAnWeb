@@ -21,38 +21,20 @@
 <h2>Quản lý thông tin sản phẩm </h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới sản phẩm ", "Themsp")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.First().TenSP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Gia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Mota)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().AnhSP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().MaLoai)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().NgayUpdate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Soluong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().MaCD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().MaMau)
-        </th>
-        <th></th>
+        <th style="width:200px">  Tên sản phẩm  </th>
+        <th style="width:100px">  Giá bán  </th>
+        <th style="width:300px">  Mô tả    </th>
+        <th style="width:120px">  Ảnh sản phẩm   </th>
+        <th style="width:150px">  Loại sản phẩm  </th>
+        <th style="width:120px">  Ngày cập nhật </th>
+        <th style="width:120px">  Số lượng    </th>
+        <th style="width:100px">  Chủ đề   </th>
+        <th style="width:100px">  Màu sắc    </th>
+        <th style="width:200px">  </th>
     </tr>
 
     @foreach (var item in Model)
@@ -87,9 +69,9 @@
     </td>
 
     <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
-        @Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.MaSP })
+        @Html.ActionLink("Sửa", "Suasp", new { id = item.MaSP }) |
+        @Html.ActionLink("Chi tiết ", "Chitietsp", new { id = item.MaSP }) |
+        @Html.ActionLink("Xóa ", "Xoasp", new { id = item.MaSP })
     </td>
 </tr>
     }

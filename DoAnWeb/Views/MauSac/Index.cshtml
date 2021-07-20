@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DoAnWeb.Models.MauSac>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Quản lý thông tin màu sắc </h2>
+<p>
+    @Html.ActionLink("Thêm mới Màu sắc ", "Create","MauSac")
+</p>
+<table class="table">
+    <tr>
+        <th style="width:200px">  Tên màu   </th>
+        <th style="width:200px">  </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenMau)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.MaMau }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaMau }) |
+                @Html.ActionLink("Xóa ", "XoaMau", new { id = item.MaMau })
+            </td>
+        </tr>
+    }
+    </table>
